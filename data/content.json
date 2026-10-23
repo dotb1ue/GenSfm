@@ -1,0 +1,625 @@
+{
+  "projectName": "GenSfM",
+  "title": "Generative Structure from Motion with Native 3D Diffusion",
+  "subtitle": "Complete geometry, appearance, and camera poses from a few uncalibrated images.",
+  "venue": "NeurIPS 2026",
+  "authors": [
+    {
+      "name": "Haobin Duan",
+      "affiliations": [
+        "1",
+        "2"
+      ],
+      "noteMarker": "*",
+      "note": "* Equal contribution."
+    },
+    {
+      "name": "Binbin Huang",
+      "affiliations": [
+        "1",
+        "2"
+      ],
+      "noteMarker": "*",
+      "note": "* Equal contribution."
+    },
+    {
+      "name": "Mochu Xiang",
+      "affiliations": [
+        "1",
+        "2"
+      ]
+    },
+    {
+      "name": "Yiqun Zhao",
+      "affiliations": [
+        "1",
+        "2"
+      ]
+    },
+    {
+      "name": "Zibo Zhao",
+      "affiliations": [
+        "3"
+      ]
+    },
+    {
+      "name": "Yi Ma",
+      "affiliations": [
+        "1",
+        "2"
+      ]
+    },
+    {
+      "name": "Shenghua Gao",
+      "affiliations": [
+        "1",
+        "2"
+      ],
+      "noteMarker": "†",
+      "note": "† Corresponding author."
+    }
+  ],
+  "affiliations": [
+    {
+      "id": "1",
+      "name": "The University of Hong Kong"
+    },
+    {
+      "id": "2",
+      "name": "Transengram"
+    },
+    {
+      "id": "3",
+      "name": "Tencent"
+    }
+  ],
+  "resources": [
+    {
+      "label": "arXiv · Coming soon",
+      "pending": true
+    },
+    {
+      "label": "Code",
+      "url": "https://github.com/dotb1ue/GenSfm"
+    },
+    {
+      "label": "Models",
+      "url": "https://huggingface.co/dotblue/GenSfm"
+    },
+    {
+      "label": "Explore results",
+      "url": "#gallery"
+    }
+  ],
+  "abstract": "GenSfM reconstructs complete object geometry, appearance, and camera poses from a few uncalibrated images. A native 3D diffusion transformer jointly denoises shared shape and compact per-view pose latents. A pose-aware refinement stage uses image features to recover geometry and texture, without an external pose estimator or post-hoc optimization. Four-view evaluations on Toys4K and GSO show improved reconstruction fidelity and camera recovery over the compared baselines.",
+  "contributions": [
+    {
+      "title": "Joint shape and camera reasoning",
+      "description": "A shared diffusion transformer jointly recovers object structure and camera poses, completing surfaces hidden from the inputs."
+    },
+    {
+      "title": "Compact, 3D-native pose tokens",
+      "description": "Each view uses a compact 4 × 4 × 4 pose latent that communicates with the shared shape."
+    },
+    {
+      "title": "Pose-aware detail and texture",
+      "description": "Recovered cameras align semantic and texture features with active voxels to refine geometry and appearance."
+    }
+  ],
+  "method": {
+    "image": "assets/derived/pipeline-dlt.webp",
+    "alt": "GenSfM coarse-to-fine pipeline with a joint shape-pose diffusion transformer and pose-aware fine generation.",
+    "caption": "Joint shape-and-pose diffusion recovers structure and cameras; pose-aligned image features then refine geometry and appearance."
+  },
+  "figures": [
+    {
+      "id": "teaser",
+      "title": "Object and camera recovery",
+      "image": "assets/derived/teaser.webp",
+      "alt": "Generative recovery of object shape and input camera poses from multiple images.",
+      "caption": "Joint diffusion recovers one complete object and its cameras: predicted cameras in blue, ground truth in red."
+    },
+    {
+      "id": "generation",
+      "title": "3D generation",
+      "image": "assets/derived/generation-comparison.webp",
+      "alt": "Qualitative comparisons with SAM 3D and TRELLIS on Toys4K and GSO.",
+      "caption": "Held-out novel-view comparisons under the similarity-ICP protocol for 3D generation."
+    },
+    {
+      "id": "reconstruction",
+      "title": "Sparse-view reconstruction",
+      "image": "assets/derived/reconstruction-comparison.webp",
+      "alt": "Qualitative comparisons with FreeSplatter, LucidFusion and ReconViaGen on Toys4K and GSO.",
+      "caption": "Held-out novel-view comparisons under the input-view pointmap least-squares alignment protocol for reconstruction."
+    }
+  ],
+  "results": {
+    "intro": "First 400 objects per dataset in metadata order; two four-view input sets and eight novel views per set.",
+    "tables": [
+      {
+        "id": "generation",
+        "label": "3D generation",
+        "intro": "Similarity-ICP alignment.",
+        "columns": [
+          {
+            "key": "dataset",
+            "label": "Dataset"
+          },
+          {
+            "key": "psnr",
+            "label": "PSNR (dB)",
+            "direction": "higher"
+          },
+          {
+            "key": "ssim",
+            "label": "SSIM",
+            "direction": "higher"
+          },
+          {
+            "key": "lpips",
+            "label": "LPIPS",
+            "direction": "lower"
+          },
+          {
+            "key": "cd",
+            "label": "CD × 10³",
+            "direction": "lower"
+          },
+          {
+            "key": "f01",
+            "label": "F @ 0.01",
+            "direction": "higher"
+          },
+          {
+            "key": "f05",
+            "label": "F @ 0.05",
+            "direction": "higher"
+          }
+        ],
+        "rows": [
+          {
+            "label": "SAM 3D",
+            "highlight": false,
+            "values": {
+              "dataset": "Toys4K",
+              "psnr": "20.49",
+              "ssim": "0.9155",
+              "lpips": "0.0926",
+              "cd": "1.7935",
+              "f01": "0.3292",
+              "f05": "0.8250"
+            }
+          },
+          {
+            "label": "TRELLIS-S",
+            "highlight": false,
+            "values": {
+              "dataset": "Toys4K",
+              "psnr": "21.78",
+              "ssim": "0.9205",
+              "lpips": "0.0874",
+              "cd": "1.2032",
+              "f01": "0.4064",
+              "f05": "0.8881"
+            }
+          },
+          {
+            "label": "TRELLIS-M",
+            "highlight": false,
+            "values": {
+              "dataset": "Toys4K",
+              "psnr": "24.01",
+              "ssim": "0.9355",
+              "lpips": "0.0658",
+              "cd": "0.4329",
+              "f01": "0.5570",
+              "f05": "0.9604"
+            }
+          },
+          {
+            "label": "ReconViaGen",
+            "highlight": false,
+            "values": {
+              "dataset": "Toys4K",
+              "psnr": "23.26",
+              "ssim": "0.9316",
+              "lpips": "0.0587",
+              "cd": "0.6955",
+              "f01": "0.4374",
+              "f05": "0.9555"
+            }
+          },
+          {
+            "label": "GenSfM",
+            "highlight": true,
+            "values": {
+              "dataset": "Toys4K",
+              "psnr": "28.54",
+              "ssim": "0.9599",
+              "lpips": "0.0315",
+              "cd": "0.1133",
+              "f01": "0.8279",
+              "f05": "0.9970"
+            }
+          },
+          {
+            "label": "SAM 3D",
+            "highlight": false,
+            "values": {
+              "dataset": "GSO",
+              "psnr": "19.49",
+              "ssim": "0.8995",
+              "lpips": "0.1112",
+              "cd": "1.3716",
+              "f01": "0.3387",
+              "f05": "0.8505"
+            }
+          },
+          {
+            "label": "TRELLIS-S",
+            "highlight": false,
+            "values": {
+              "dataset": "GSO",
+              "psnr": "20.00",
+              "ssim": "0.8943",
+              "lpips": "0.1127",
+              "cd": "1.2418",
+              "f01": "0.3663",
+              "f05": "0.8695"
+            }
+          },
+          {
+            "label": "TRELLIS-M",
+            "highlight": false,
+            "values": {
+              "dataset": "GSO",
+              "psnr": "22.28",
+              "ssim": "0.9138",
+              "lpips": "0.0867",
+              "cd": "0.5200",
+              "f01": "0.5079",
+              "f05": "0.9655"
+            }
+          },
+          {
+            "label": "ReconViaGen",
+            "highlight": false,
+            "values": {
+              "dataset": "GSO",
+              "psnr": "21.98",
+              "ssim": "0.9108",
+              "lpips": "0.0778",
+              "cd": "0.6500",
+              "f01": "0.4428",
+              "f05": "0.9434"
+            }
+          },
+          {
+            "label": "GenSfM",
+            "highlight": true,
+            "values": {
+              "dataset": "GSO",
+              "psnr": "25.50",
+              "ssim": "0.9349",
+              "lpips": "0.0533",
+              "cd": "0.1882",
+              "f01": "0.7283",
+              "f05": "0.9914"
+            }
+          }
+        ],
+        "note": "CD: median squared-L2 Chamfer ×10³. Novel-view appearance uses renders; geometry uses meshes. Benchmark averages are separate from the curated gallery."
+      },
+      {
+        "id": "reconstruction",
+        "label": "Reconstruction",
+        "intro": "Input-view pointmap least-squares alignment.",
+        "columns": [
+          {
+            "key": "dataset",
+            "label": "Dataset"
+          },
+          {
+            "key": "psnr",
+            "label": "PSNR (dB)",
+            "direction": "higher"
+          },
+          {
+            "key": "ssim",
+            "label": "SSIM",
+            "direction": "higher"
+          },
+          {
+            "key": "lpips",
+            "label": "LPIPS",
+            "direction": "lower"
+          },
+          {
+            "key": "cd",
+            "label": "CD × 10³",
+            "direction": "lower"
+          },
+          {
+            "key": "f01",
+            "label": "F @ 0.01",
+            "direction": "higher"
+          },
+          {
+            "key": "f05",
+            "label": "F @ 0.05",
+            "direction": "higher"
+          }
+        ],
+        "rows": [
+          {
+            "label": "FreeSplatter",
+            "highlight": false,
+            "values": {
+              "dataset": "Toys4K",
+              "psnr": "22.00",
+              "ssim": "0.9183",
+              "lpips": "0.0913",
+              "cd": "2.7160",
+              "f01": "0.3163",
+              "f05": "0.7112"
+            }
+          },
+          {
+            "label": "LucidFusion",
+            "highlight": false,
+            "values": {
+              "dataset": "Toys4K",
+              "psnr": "22.24",
+              "ssim": "0.9251",
+              "lpips": "0.0827",
+              "cd": "4.1596",
+              "f01": "0.1527",
+              "f05": "0.6670"
+            }
+          },
+          {
+            "label": "ReconViaGen",
+            "highlight": false,
+            "values": {
+              "dataset": "Toys4K",
+              "psnr": "21.88",
+              "ssim": "0.9216",
+              "lpips": "0.0721",
+              "cd": "1.1237",
+              "f01": "0.3369",
+              "f05": "0.8434"
+            }
+          },
+          {
+            "label": "GenSfM",
+            "highlight": true,
+            "values": {
+              "dataset": "Toys4K",
+              "psnr": "28.61",
+              "ssim": "0.9609",
+              "lpips": "0.0308",
+              "cd": "0.2184",
+              "f01": "0.6701",
+              "f05": "0.9823"
+            }
+          },
+          {
+            "label": "FreeSplatter",
+            "highlight": false,
+            "values": {
+              "dataset": "GSO",
+              "psnr": "20.07",
+              "ssim": "0.8948",
+              "lpips": "0.1135",
+              "cd": "3.2859",
+              "f01": "0.2713",
+              "f05": "0.6736"
+            }
+          },
+          {
+            "label": "LucidFusion",
+            "highlight": false,
+            "values": {
+              "dataset": "GSO",
+              "psnr": "20.94",
+              "ssim": "0.9097",
+              "lpips": "0.0943",
+              "cd": "3.8702",
+              "f01": "0.1755",
+              "f05": "0.7164"
+            }
+          },
+          {
+            "label": "ReconViaGen",
+            "highlight": false,
+            "values": {
+              "dataset": "GSO",
+              "psnr": "20.88",
+              "ssim": "0.9021",
+              "lpips": "0.0856",
+              "cd": "1.0495",
+              "f01": "0.3524",
+              "f05": "0.8789"
+            }
+          },
+          {
+            "label": "GenSfM",
+            "highlight": true,
+            "values": {
+              "dataset": "GSO",
+              "psnr": "26.36",
+              "ssim": "0.9411",
+              "lpips": "0.0472",
+              "cd": "0.2801",
+              "f01": "0.6095",
+              "f05": "0.9842"
+            }
+          }
+        ],
+        "note": "CD: median squared-L2 Chamfer ×10³. Novel-view appearance uses renders; geometry uses meshes. Benchmark averages are separate from the curated gallery."
+      },
+      {
+        "id": "poses",
+        "label": "Camera poses",
+        "intro": "Raw, gauge-invariant pairwise poses with ambiguity-tolerant scoring; rotation, translation-direction, and FOV errors are in degrees.",
+        "columns": [
+          {
+            "key": "dataset",
+            "label": "Dataset"
+          },
+          {
+            "key": "rre",
+            "label": "Rotation error (°)",
+            "direction": "lower"
+          },
+          {
+            "key": "acc5",
+            "label": "Acc @ 5°",
+            "direction": "higher"
+          },
+          {
+            "key": "acc15",
+            "label": "Acc @ 15°",
+            "direction": "higher"
+          },
+          {
+            "key": "rte",
+            "label": "Translation direction (°)",
+            "direction": "lower"
+          },
+          {
+            "key": "fov",
+            "label": "FOV error (°)",
+            "direction": "lower"
+          }
+        ],
+        "rows": [
+          {
+            "label": "FreeSplatter",
+            "highlight": false,
+            "values": {
+              "dataset": "Toys4K",
+              "rre": "26.45",
+              "acc5": "24.38%",
+              "acc15": "49.96%",
+              "rte": "32.32",
+              "fov": "12.51"
+            }
+          },
+          {
+            "label": "ReconViaGen",
+            "highlight": false,
+            "values": {
+              "dataset": "Toys4K",
+              "rre": "16.54",
+              "acc5": "20.44%",
+              "acc15": "68.81%",
+              "rte": "19.56",
+              "fov": "9.54"
+            }
+          },
+          {
+            "label": "VGGT",
+            "highlight": false,
+            "values": {
+              "dataset": "Toys4K",
+              "rre": "10.29",
+              "acc5": "59.69%",
+              "acc15": "84.06%",
+              "rte": "18.61",
+              "fov": "37.66"
+            }
+          },
+          {
+            "label": "GenSfM (predicted intrinsics)",
+            "highlight": true,
+            "values": {
+              "dataset": "Toys4K",
+              "rre": "1.60",
+              "acc5": "97.23%",
+              "acc15": "99.13%",
+              "rte": "5.51",
+              "fov": "2.90"
+            }
+          },
+          {
+            "label": "GenSfM (known intrinsics)",
+            "highlight": true,
+            "values": {
+              "dataset": "Toys4K",
+              "rre": "1.44",
+              "acc5": "97.98%",
+              "acc15": "99.10%",
+              "rte": "2.38",
+              "fov": "—"
+            }
+          },
+          {
+            "label": "FreeSplatter",
+            "highlight": false,
+            "values": {
+              "dataset": "GSO",
+              "rre": "29.10",
+              "acc5": "23.27%",
+              "acc15": "46.46%",
+              "rte": "32.81",
+              "fov": "13.13"
+            }
+          },
+          {
+            "label": "ReconViaGen",
+            "highlight": false,
+            "values": {
+              "dataset": "GSO",
+              "rre": "14.48",
+              "acc5": "22.60%",
+              "acc15": "73.43%",
+              "rte": "16.16",
+              "fov": "8.95"
+            }
+          },
+          {
+            "label": "VGGT",
+            "highlight": false,
+            "values": {
+              "dataset": "GSO",
+              "rre": "9.33",
+              "acc5": "63.10%",
+              "acc15": "87.02%",
+              "rte": "17.69",
+              "fov": "36.08"
+            }
+          },
+          {
+            "label": "GenSfM (predicted intrinsics)",
+            "highlight": true,
+            "values": {
+              "dataset": "GSO",
+              "rre": "1.27",
+              "acc5": "98.21%",
+              "acc15": "99.85%",
+              "rte": "5.08",
+              "fov": "2.86"
+            }
+          },
+          {
+            "label": "GenSfM (known intrinsics)",
+            "highlight": true,
+            "values": {
+              "dataset": "GSO",
+              "rre": "1.13",
+              "acc5": "98.92%",
+              "acc15": "99.81%",
+              "rte": "2.11",
+              "fov": "—"
+            }
+          }
+        ],
+        "note": "Known intrinsics are an auxiliary condition; FOV error applies only to predicted intrinsics."
+      }
+    ]
+  },
+  "footerNote": "GenSfM · Generative Structure from Motion with Native 3D Diffusion",
+  "citation": "@inproceedings{duan2026gensfm,\n  title = {Generative Structure from Motion with Native {3D} Diffusion},\n  author = {Duan, Haobin and Huang, Binbin and Xiang, Mochu and Zhao, Yiqun\n            and Zhao, Zibo and Ma, Yi and Gao, Shenghua},\n  booktitle = {Advances in Neural Information Processing Systems},\n  year = {2026}\n}"
+}

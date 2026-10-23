@@ -1,0 +1,372 @@
+{
+  "schemaVersion": 1,
+  "defaultCaseId": "hero-wagon6519-s20261022",
+  "video": {
+    "src": "assets/video/gensfm-paper-video-web.mp4",
+    "poster": "assets/video/poster.webp",
+    "sha256": "605c52c773b2441aac03081f3c38192ea8d8c27e58e55bdc6f8741703acb3148",
+    "duration": 75.5
+  },
+  "items": [
+    {
+      "id": "hero-wagon6519-s20261022",
+      "label": "Fabric wagon",
+      "dataset": "ABO",
+      "category": "wagon",
+      "domain": "synthetic",
+      "featured": false,
+      "thumbnail": "assets/interactive/hero-wagon6519-s20261022/thumbnail.webp",
+      "manifest": "assets/interactive/hero-wagon6519-s20261022/manifest.json"
+    },
+    {
+      "id": "toys4k-3094",
+      "label": "City bus",
+      "dataset": "Toys4k",
+      "category": "bus",
+      "domain": "synthetic",
+      "featured": true,
+      "thumbnail": "assets/interactive/toys4k-3094/thumbnail.webp",
+      "manifest": "assets/interactive/toys4k-3094/manifest.json"
+    },
+    {
+      "id": "toys4k-389",
+      "label": "Violin",
+      "dataset": "Toys4k",
+      "category": "violin",
+      "domain": "synthetic",
+      "featured": true,
+      "thumbnail": "assets/interactive/toys4k-389/thumbnail.webp",
+      "manifest": "assets/interactive/toys4k-389/manifest.json"
+    },
+    {
+      "id": "toys4k-5132",
+      "label": "Tricycle",
+      "dataset": "Toys4k",
+      "category": "bicycle",
+      "domain": "synthetic",
+      "featured": true,
+      "thumbnail": "assets/interactive/toys4k-5132/thumbnail.webp",
+      "manifest": "assets/interactive/toys4k-5132/manifest.json"
+    },
+    {
+      "id": "abo-3986",
+      "label": "Serving cart",
+      "dataset": "ABO",
+      "category": "serving cart",
+      "domain": "synthetic",
+      "featured": true,
+      "thumbnail": "assets/interactive/abo-3986/thumbnail.webp",
+      "manifest": "assets/interactive/abo-3986/manifest.json"
+    },
+    {
+      "id": "abo-5935",
+      "label": "Ceiling fan",
+      "dataset": "ABO",
+      "category": "fan",
+      "domain": "synthetic",
+      "featured": true,
+      "thumbnail": "assets/interactive/abo-5935/thumbnail.webp",
+      "manifest": "assets/interactive/abo-5935/manifest.json"
+    },
+    {
+      "id": "toys4k-88",
+      "label": "Drum",
+      "dataset": "Toys4k",
+      "category": "drum",
+      "domain": "synthetic",
+      "featured": true,
+      "thumbnail": "assets/interactive/toys4k-88/thumbnail.webp",
+      "manifest": "assets/interactive/toys4k-88/manifest.json"
+    },
+    {
+      "id": "orb-teapot-alt",
+      "label": "Teapot",
+      "dataset": "real-world",
+      "category": "orb-teapot-alt",
+      "domain": "real-world",
+      "featured": true,
+      "thumbnail": "assets/interactive/orb-teapot-alt/thumbnail.webp",
+      "manifest": "assets/interactive/orb-teapot-alt/manifest.json"
+    },
+    {
+      "id": "nerd-head",
+      "label": "Sculpted head",
+      "dataset": "real-world",
+      "category": "nerd-head",
+      "domain": "real-world",
+      "featured": true,
+      "thumbnail": "assets/interactive/nerd-head/thumbnail.webp",
+      "manifest": "assets/interactive/nerd-head/manifest.json"
+    },
+    {
+      "id": "orb-gnome",
+      "label": "Garden gnome",
+      "dataset": "real-world",
+      "category": "orb-gnome",
+      "domain": "real-world",
+      "featured": true,
+      "thumbnail": "assets/interactive/orb-gnome/thumbnail.webp",
+      "manifest": "assets/interactive/orb-gnome/manifest.json"
+    },
+    {
+      "id": "dtu-scan106-full",
+      "label": "Bird figurine",
+      "dataset": "real-world",
+      "category": "dtu-scan106-full",
+      "domain": "real-world",
+      "featured": true,
+      "thumbnail": "assets/interactive/dtu-scan106-full/thumbnail.webp",
+      "manifest": "assets/interactive/dtu-scan106-full/manifest.json"
+    },
+    {
+      "id": "oi-61",
+      "label": "Plush whale",
+      "dataset": "real-world",
+      "category": "oi-61",
+      "domain": "real-world",
+      "featured": true,
+      "thumbnail": "assets/interactive/oi-61/thumbnail.webp",
+      "manifest": "assets/interactive/oi-61/manifest.json"
+    },
+    {
+      "id": "orb-grogu-s20261024",
+      "label": "Grogu mug",
+      "dataset": "real-world",
+      "category": "orb-grogu-s20261024",
+      "domain": "real-world",
+      "featured": true,
+      "thumbnail": "assets/interactive/orb-grogu-s20261024/thumbnail.webp",
+      "manifest": "assets/interactive/orb-grogu-s20261024/manifest.json"
+    },
+    {
+      "id": "abo-7319",
+      "label": "Pendant light",
+      "dataset": "ABO",
+      "category": "tableware",
+      "domain": "synthetic",
+      "featured": false,
+      "thumbnail": "assets/interactive/abo-7319/thumbnail.webp",
+      "manifest": "assets/interactive/abo-7319/manifest.json"
+    },
+    {
+      "id": "abo-696",
+      "label": "Armchair",
+      "dataset": "ABO",
+      "category": "armchair",
+      "domain": "synthetic",
+      "featured": false,
+      "thumbnail": "assets/interactive/abo-696/thumbnail.webp",
+      "manifest": "assets/interactive/abo-696/manifest.json"
+    },
+    {
+      "id": "orb-cactus-s20261025",
+      "label": "Cactus planter",
+      "dataset": "real-world",
+      "category": "orb-cactus-s20261025",
+      "domain": "real-world",
+      "featured": false,
+      "thumbnail": "assets/interactive/orb-cactus-s20261025/thumbnail.webp",
+      "manifest": "assets/interactive/orb-cactus-s20261025/manifest.json"
+    },
+    {
+      "id": "toys4k-1425",
+      "label": "Flatbed truck",
+      "dataset": "Toys4k",
+      "category": "truck",
+      "domain": "synthetic",
+      "featured": false,
+      "thumbnail": "assets/interactive/toys4k-1425/thumbnail.webp",
+      "manifest": "assets/interactive/toys4k-1425/manifest.json"
+    },
+    {
+      "id": "toys4k-2742",
+      "label": "MIDI keyboard",
+      "dataset": "Toys4k",
+      "category": "piano",
+      "domain": "synthetic",
+      "featured": false,
+      "thumbnail": "assets/interactive/toys4k-2742/thumbnail.webp",
+      "manifest": "assets/interactive/toys4k-2742/manifest.json"
+    },
+    {
+      "id": "toys4k-3125",
+      "label": "Robot",
+      "dataset": "Toys4k",
+      "category": "robot",
+      "domain": "synthetic",
+      "featured": false,
+      "thumbnail": "assets/interactive/toys4k-3125/thumbnail.webp",
+      "manifest": "assets/interactive/toys4k-3125/manifest.json"
+    },
+    {
+      "id": "nerd-liberty-refined",
+      "label": "Statue of Liberty",
+      "dataset": "real-world",
+      "category": "nerd-liberty-refined",
+      "domain": "real-world",
+      "featured": false,
+      "thumbnail": "assets/interactive/nerd-liberty-refined/thumbnail.webp",
+      "manifest": "assets/interactive/nerd-liberty-refined/manifest.json"
+    },
+    {
+      "id": "toys4k-914",
+      "label": "Purple cat",
+      "dataset": "Toys4k",
+      "category": "cat",
+      "domain": "synthetic",
+      "featured": false,
+      "thumbnail": "assets/interactive/toys4k-914/thumbnail.webp",
+      "manifest": "assets/interactive/toys4k-914/manifest.json"
+    },
+    {
+      "id": "toys4k-1043",
+      "label": "Elephant",
+      "dataset": "Toys4k",
+      "category": "elephant",
+      "domain": "synthetic",
+      "featured": false,
+      "thumbnail": "assets/interactive/toys4k-1043/thumbnail.webp",
+      "manifest": "assets/interactive/toys4k-1043/manifest.json"
+    },
+    {
+      "id": "toys4k-256",
+      "label": "Mushroom",
+      "dataset": "Toys4k",
+      "category": "mushroom",
+      "domain": "synthetic",
+      "featured": false,
+      "thumbnail": "assets/interactive/toys4k-256/thumbnail.webp",
+      "manifest": "assets/interactive/toys4k-256/manifest.json"
+    },
+    {
+      "id": "toys4k-4849",
+      "label": "Wizard hat",
+      "dataset": "Toys4k",
+      "category": "hat",
+      "domain": "synthetic",
+      "featured": false,
+      "thumbnail": "assets/interactive/toys4k-4849/thumbnail.webp",
+      "manifest": "assets/interactive/toys4k-4849/manifest.json"
+    },
+    {
+      "id": "oi-46-full",
+      "label": "Plush triceratops",
+      "dataset": "real-world",
+      "category": "oi-46-full",
+      "domain": "real-world",
+      "featured": false,
+      "thumbnail": "assets/interactive/oi-46-full/thumbnail.webp",
+      "manifest": "assets/interactive/oi-46-full/manifest.json"
+    },
+    {
+      "id": "toys4k-5532",
+      "label": "Lemon cake",
+      "dataset": "Toys4k",
+      "category": "cake",
+      "domain": "synthetic",
+      "featured": false,
+      "thumbnail": "assets/interactive/toys4k-5532/thumbnail.webp",
+      "manifest": "assets/interactive/toys4k-5532/manifest.json"
+    },
+    {
+      "id": "toys4k-2906",
+      "label": "Whale",
+      "dataset": "Toys4k",
+      "category": "whale",
+      "domain": "synthetic",
+      "featured": false,
+      "thumbnail": "assets/interactive/toys4k-2906/thumbnail.webp",
+      "manifest": "assets/interactive/toys4k-2906/manifest.json"
+    },
+    {
+      "id": "abo-8403",
+      "label": "Chair",
+      "dataset": "ABO",
+      "category": "chair",
+      "domain": "synthetic",
+      "featured": false,
+      "thumbnail": "assets/interactive/abo-8403/thumbnail.webp",
+      "manifest": "assets/interactive/abo-8403/manifest.json"
+    },
+    {
+      "id": "oi-31",
+      "label": "Painted gnome",
+      "dataset": "real-world",
+      "category": "oi-31",
+      "domain": "real-world",
+      "featured": false,
+      "thumbnail": "assets/interactive/oi-31/thumbnail.webp",
+      "manifest": "assets/interactive/oi-31/manifest.json"
+    },
+    {
+      "id": "toys4k-453",
+      "label": "Stepladder",
+      "dataset": "Toys4k",
+      "category": "ladder",
+      "domain": "synthetic",
+      "featured": false,
+      "thumbnail": "assets/interactive/toys4k-453/thumbnail.webp",
+      "manifest": "assets/interactive/toys4k-453/manifest.json"
+    },
+    {
+      "id": "toys4k-413",
+      "label": "Electric guitar",
+      "dataset": "Toys4k",
+      "category": "guitar",
+      "domain": "synthetic",
+      "featured": false,
+      "thumbnail": "assets/interactive/toys4k-413/thumbnail.webp",
+      "manifest": "assets/interactive/toys4k-413/manifest.json"
+    },
+    {
+      "id": "abo-3747",
+      "label": "Hanging planter",
+      "dataset": "ABO",
+      "category": "planter",
+      "domain": "synthetic",
+      "featured": false,
+      "thumbnail": "assets/interactive/abo-3747/thumbnail.webp",
+      "manifest": "assets/interactive/abo-3747/manifest.json"
+    },
+    {
+      "id": "toys4k-5273",
+      "label": "Inflatable boat",
+      "dataset": "Toys4k",
+      "category": "boat",
+      "domain": "synthetic",
+      "featured": false,
+      "thumbnail": "assets/interactive/toys4k-5273/thumbnail.webp",
+      "manifest": "assets/interactive/toys4k-5273/manifest.json"
+    },
+    {
+      "id": "oi-62",
+      "label": "Birthday cake plush",
+      "dataset": "real-world",
+      "category": "oi-62",
+      "domain": "real-world",
+      "featured": false,
+      "thumbnail": "assets/interactive/oi-62/thumbnail.webp",
+      "manifest": "assets/interactive/oi-62/manifest.json"
+    },
+    {
+      "id": "toys4k-827",
+      "label": "Two-way radio",
+      "dataset": "Toys4k",
+      "category": "radio",
+      "domain": "synthetic",
+      "featured": false,
+      "thumbnail": "assets/interactive/toys4k-827/thumbnail.webp",
+      "manifest": "assets/interactive/toys4k-827/manifest.json"
+    },
+    {
+      "id": "toys4k-1597",
+      "label": "Synthesizer",
+      "dataset": "Toys4k",
+      "category": "piano",
+      "domain": "synthetic",
+      "featured": false,
+      "thumbnail": "assets/interactive/toys4k-1597/thumbnail.webp",
+      "manifest": "assets/interactive/toys4k-1597/manifest.json"
+    }
+  ]
+}

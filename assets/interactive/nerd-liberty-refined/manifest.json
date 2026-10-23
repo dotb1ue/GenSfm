@@ -1,0 +1,346 @@
+{
+  "schemaVersion": 1,
+  "id": "nerd-liberty-refined",
+  "label": "Statue of Liberty",
+  "mesh": "mesh.glb",
+  "meshSha256": "8286143163ac0700a74d41fcdeb52e11bdd9b5597d205b574d28d6d21b3f0bbe",
+  "images": [
+    {
+      "file": "input-00.png",
+      "width": 518,
+      "height": 518,
+      "channels": 3,
+      "viewIndex": 0,
+      "variant": "cropped",
+      "sourceKey": "actual-model-crop-white-composite",
+      "alphaMode": "none",
+      "background": "white",
+      "cropBounds": [
+        [
+          0.1336104513064133,
+          0.1336104513064133
+        ],
+        [
+          0.8663895486935868,
+          0.8663895486935868
+        ]
+      ],
+      "sha256": "97089d6187e90b78da2cda406d8ce73a2d80dd77df198b36b297c2069ada9fbe",
+      "pixelSha256": "c2af662b6c8b750829aeaecacc632a8aa633131af6ee1a003d6f21c7a98d0a8e",
+      "sourceRgbaSha256": "12f217e4195fe5bc13224cda3e91e25edfbeaf6e2a88daa271cc033e246d442b"
+    },
+    {
+      "file": "input-01.png",
+      "width": 518,
+      "height": 518,
+      "channels": 3,
+      "viewIndex": 1,
+      "variant": "cropped",
+      "sourceKey": "actual-model-crop-white-composite",
+      "alphaMode": "none",
+      "background": "white",
+      "cropBounds": [
+        [
+          0.09619952494061758,
+          0.09619952494061758
+        ],
+        [
+          0.9038004750593824,
+          0.9038004750593824
+        ]
+      ],
+      "sha256": "9edd170d1986179205da2b3d2213aa347b9c4e3947bc7f3a92e1b44e5f95c41d",
+      "pixelSha256": "ade0f984f2536a03deb06769aea413e5063fc30d402c236cc49308fcccc284a7",
+      "sourceRgbaSha256": "0fabfd2db24bf36f541117176877f86ab732a21100d240579a1a09b01f18cb7a"
+    },
+    {
+      "file": "input-02.png",
+      "width": 518,
+      "height": 518,
+      "channels": 3,
+      "viewIndex": 2,
+      "variant": "cropped",
+      "sourceKey": "actual-model-crop-white-composite",
+      "alphaMode": "none",
+      "background": "white",
+      "cropBounds": [
+        [
+          0.11817102137767221,
+          0.11817102137767221
+        ],
+        [
+          0.8818289786223278,
+          0.8818289786223278
+        ]
+      ],
+      "sha256": "93b9ac1abaeb35ae14fd97356a31ac2c202a0b4e9f2ef6b458067ad1113dd280",
+      "pixelSha256": "1d4a1b601bc99f0dfbb53d32f316e72f1071ab3704d021dfa37b11acc620ea3a",
+      "sourceRgbaSha256": "6942d6196022edaf78227a6686a5a1520b638ec78d09c2d40e1b868d9bfd2d62"
+    },
+    {
+      "file": "input-03.png",
+      "width": 518,
+      "height": 518,
+      "channels": 3,
+      "viewIndex": 3,
+      "variant": "cropped",
+      "sourceKey": "actual-model-crop-white-composite",
+      "alphaMode": "none",
+      "background": "white",
+      "cropBounds": [
+        [
+          0.09798099762470308,
+          0.09798099762470308
+        ],
+        [
+          0.9020190023752969,
+          0.9020190023752969
+        ]
+      ],
+      "sha256": "c09642cfc542d6998223b60b5f321bfcb2544c3ef88d4edcfa0004be7f12dd62",
+      "pixelSha256": "0a19ee0b7e70a10bdb72114d7f7eea772389b775e38304a14c42eda9de695533",
+      "sourceRgbaSha256": "101871538418cf6aae240c32ef0d668778db227c6ee051eff41aff425209bb69"
+    }
+  ],
+  "cameras": [
+    {
+      "viewIndex": 0,
+      "image": "input-00.png",
+      "extrinsics": [
+        [
+          0.9698326587677002,
+          0.24377068877220154,
+          -0.0006698732613585889,
+          -0.2525874972343445
+        ],
+        [
+          -0.013947483152151108,
+          0.052745673805475235,
+          -0.9985105991363525,
+          0.11399444937705994
+        ],
+        [
+          -0.24337227642536163,
+          0.9683974981307983,
+          0.05455446615815163,
+          14.656046867370605
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "intrinsics": [
+        [
+          12.198969841003418,
+          0.005252497736364603,
+          0.7123730778694153
+        ],
+        [
+          2.0811559279973165e-15,
+          12.211514472961426,
+          0.4056655168533325
+        ],
+        [
+          3.325530429386943e-17,
+          3.514673051944951e-18,
+          1
+        ]
+      ],
+      "sourceKeys": [
+        "raw-predicted-extrinsics",
+        "raw-predicted-full-intrinsics"
+      ]
+    },
+    {
+      "viewIndex": 1,
+      "image": "input-01.png",
+      "extrinsics": [
+        [
+          0.47554588317871094,
+          0.8796908855438232,
+          0.00029424583772197366,
+          0.0036765336990356445
+        ],
+        [
+          -0.23198284208774567,
+          0.12572859227657318,
+          -0.9645601511001587,
+          -0.014230728149414062
+        ],
+        [
+          -0.8485517501831055,
+          0.45862433314323425,
+          0.2638629078865051,
+          2.159494638442993
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "intrinsics": [
+        [
+          1.8971832990646362,
+          0.00007841388287488371,
+          0.503309965133667
+        ],
+        [
+          1.9702611039933626e-16,
+          1.8965485095977783,
+          0.4764670729637146
+        ],
+        [
+          1.9184421098221822e-17,
+          -3.109885767183349e-17,
+          1
+        ]
+      ],
+      "sourceKeys": [
+        "raw-predicted-extrinsics",
+        "raw-predicted-full-intrinsics"
+      ]
+    },
+    {
+      "viewIndex": 2,
+      "image": "input-02.png",
+      "extrinsics": [
+        [
+          -0.4987846612930298,
+          -0.8667255640029907,
+          0.0008165483013726771,
+          0.008200883865356445
+        ],
+        [
+          0.1976638287305832,
+          -0.1146690770983696,
+          -0.9735399484634399,
+          -0.009965658187866211
+        ],
+        [
+          0.843885600566864,
+          -0.4854253828525543,
+          0.22851546108722687,
+          2.6007769107818604
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "intrinsics": [
+        [
+          2.1727638244628906,
+          0.0006095764110796154,
+          0.47756096720695496
+        ],
+        [
+          -2.9039571684548026e-16,
+          2.174868583679199,
+          0.5004702806472778
+        ],
+        [
+          1.0437562830796626e-16,
+          1.1090151424074821e-16,
+          1
+        ]
+      ],
+      "sourceKeys": [
+        "raw-predicted-extrinsics",
+        "raw-predicted-full-intrinsics"
+      ]
+    },
+    {
+      "viewIndex": 3,
+      "image": "input-03.png",
+      "extrinsics": [
+        [
+          0.2534226179122925,
+          -0.9673547148704529,
+          -0.001373769948258996,
+          -0.008617699146270752
+        ],
+        [
+          0.28066569566726685,
+          0.074886254966259,
+          -0.956879734992981,
+          -0.010631561279296875
+        ],
+        [
+          0.9257449507713318,
+          0.24210938811302185,
+          0.2904811501502991,
+          2.091395616531372
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "intrinsics": [
+        [
+          1.7010658979415894,
+          -0.00010011714039137587,
+          0.5451434850692749
+        ],
+        [
+          -9.068447229867847e-17,
+          1.703966736793518,
+          0.5095564723014832
+        ],
+        [
+          -3.910732505909322e-18,
+          2.8964878929595713e-18,
+          1
+        ]
+      ],
+      "sourceKeys": [
+        "raw-predicted-extrinsics",
+        "raw-predicted-full-intrinsics"
+      ]
+    }
+  ],
+  "coordinates": {
+    "mesh": "three-y-up",
+    "poses": "opencv-z-up",
+    "extrinsics": "world-to-camera",
+    "cameraAxes": "+x-right,+y-down,+z-forward",
+    "intrinsics": "normalized-cropped",
+    "imageOrigin": "top-left",
+    "dataToMesh": [
+      [
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        -1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1
+      ]
+    ]
+  },
+  "gtAssistedAlignment": false
+}

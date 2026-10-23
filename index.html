@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="Complete geometry, appearance, and camera poses from a few uncalibrated images.">
+  <meta property="og:title" content="GenSfM — Generative Structure from Motion with Native 3D Diffusion">
+  <meta property="og:description" content="Complete geometry, appearance, and camera poses from a few uncalibrated images.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="GenSfM">
+  <meta property="og:url" content="https://dotb1ue.github.io/GenSfm/">
+  <meta property="og:image" content="https://dotb1ue.github.io/GenSfm/assets/video/poster.webp">
+  <meta property="og:image:alt" content="GenSfM reconstructs geometry, appearance, and cameras from a few uncalibrated images.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="GenSfM — Generative Structure from Motion with Native 3D Diffusion">
+  <meta name="twitter:description" content="Complete geometry, appearance, and camera poses from a few uncalibrated images.">
+  <meta name="twitter:image" content="https://dotb1ue.github.io/GenSfm/assets/video/poster.webp">
+  <link rel="canonical" href="https://dotb1ue.github.io/GenSfm/">
+  <title>GenSfM — Generative Structure from Motion with Native 3D Diffusion</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/InterVariable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css?v=20261023-release1">
+  <link rel="stylesheet" href="results.css">
+  <script type="importmap">{"imports":{"three":"./assets/vendor/three/three.module.js","three/addons/":"./assets/vendor/three/addons/"}}</script>
+  <script type="module" src="app.js?v=20261023-release1"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="wordmark" href="#" aria-label="Back to top"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="m16 3 12 7v13l-12 7L4 23V10Z"/><path d="m4 10 12 7 12-7M16 17v13M10 6.5l12 7v13"/></svg><span id="project-name">GenSfM</span></a>
+      <nav aria-label="Main navigation"><a href="#video">Video</a><a href="#gallery">Explore</a><a href="#method" id="method-nav">Method</a><a href="#citation" id="citation-nav">Citation</a></nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="intro section-shell" aria-labelledby="paper-title">
+      <p id="project-kicker" hidden></p>
+      <h1 id="paper-title">Generative Structure from Motion with Native 3D Diffusion</h1>
+      <p class="subtitle" id="paper-subtitle" hidden></p>
+      <div class="authors" id="authors"></div>
+      <div class="affiliations" id="affiliations"></div>
+      <div class="author-notes" id="author-notes" hidden></div>
+      <div class="resources" id="resources" aria-label="Paper resources"><span class="paper-status" id="paper-status" hidden></span></div>
+
+    </section>
+
+    <section id="video" class="video-section section-shell" aria-label="GenSfM paper video">
+      <div class="film-frame"><video id="paper-video" controls playsinline preload="metadata" aria-label="GenSfM: from multi-view input to reconstructed cameras and geometry"><p>Your browser does not support this video. <a id="video-download">Download the film</a>.</p></video></div>
+      <div class="film-caption"><span>Geometry, appearance, and cameras. Recovered together.</span><a href="#gallery">Explore in 3D <span aria-hidden="true">↓</span></a></div>
+    </section>
+
+    <section id="gallery" class="gallery-section" aria-labelledby="gallery-title">
+      <div class="section-shell">
+        <div class="section-heading"><div><p class="eyebrow">INTERACTIVE RESULTS</p><h2 id="gallery-title">Explore in 3D.</h2></div><p class="section-description">Rotate the scene. Pick an input view.<br>See how the reconstruction lines up.</p></div>
+        <div class="gallery-toolbar"><div class="dataset-filters" id="dataset-filters" role="group" aria-label="Filter objects"></div><span id="object-count" class="object-count"></span></div>
+        <div class="case-rail"><button class="rail-arrow" id="case-prev" type="button" aria-label="Scroll objects left">←</button><div id="object-list" class="object-list" aria-label="Choose an object"></div><button class="rail-arrow" id="case-next" type="button" aria-label="Scroll objects right">→</button></div>
+        <article class="object-detail" id="object-detail" hidden aria-labelledby="object-title">
+          <div class="object-topline"><div><p id="object-source" class="eyebrow"></p><h3 id="object-title"></h3></div><span class="object-protocol" id="object-protocol">4 input views</span></div>
+          <div class="explorer-layout">
+            <div class="viewer-panel">
+              <div class="viewer-toolbar"><span class="viewer-mode" id="viewer-mode">3D Context</span><div class="framing-controls" role="group" aria-label="Frame the scene"><button id="fit-context" type="button" aria-pressed="true">Context</button><button id="fit-object" type="button" aria-pressed="false">Object</button></div></div>
+              <div id="viewer-canvas" class="viewer-canvas" aria-label="Interactive reconstruction and recovered cameras"><div id="viewer-status" class="viewer-status" role="status"><span class="loading-dot" aria-hidden="true"></span><span id="viewer-status-copy">Loading the 3D scene…</span></div></div>
+              <div class="viewer-footer"><span id="viewer-hint">Drag to rotate · Scroll to zoom</span><div class="scene-toggles"><label><input id="show-cameras" type="checkbox" checked> Cameras</label><label id="gt-camera-control" hidden><input id="show-gt-cameras" type="checkbox" checked><span class="gt-dash" aria-hidden="true"></span> GT</label></div></div>
+            </div>
+            <aside class="input-panel" aria-labelledby="input-panel-title">
+              <div class="input-panel-heading"><h4 id="input-panel-title">Input views</h4><span class="view-count">01 — 04</span></div>
+              <p class="input-instruction">Select an image to look through its recovered camera.</p>
+              <div id="input-thumbnails" class="input-thumbnails" role="group" aria-label="Select an input camera"></div>
+              <div class="overlay-control" id="overlay-control"><div class="overlay-heading"><label for="input-opacity">Input overlay</label><output id="opacity-value" for="input-opacity">50%</output></div><input type="range" id="input-opacity" min="0" max="100" value="50" disabled aria-valuetext="50 percent input image"><div class="overlay-endpoints"><span>Reconstruction</span><span>Input</span></div></div>
+              <button id="return-context" type="button" class="return-context" disabled><span aria-hidden="true">↶</span> Back to 3D context</button>
+            </aside>
+          </div>
+          <p class="reference-note" id="reference-note" hidden>Dashed GT cameras are aligned once to the recovered scene. Reprojection uses the predicted cameras.</p>
+        </article>
+        <p class="status-message" id="gallery-status" role="status">Loading the examples…</p>
+      </div>
+    </section>
+
+    <section id="overview" class="overview section-shell" aria-labelledby="overview-title">
+      <div class="section-intro"><h2 id="overview-title">From four views to 3D.</h2></div>
+      <div class="overview-copy"><p id="abstract" class="abstract"></p><div id="contributions" class="contributions"></div></div>
+    </section>
+
+    <section id="method" class="method-section section-shell" aria-labelledby="method-title" hidden>
+      <div class="section-heading"><h2 id="method-title">How it works</h2></div>
+      <figure class="method-figure"><a id="method-image-link" title="Open full-size figure"><img id="method-image" src="assets/empty.svg" alt="" loading="lazy" width="1400" height="650"></a><figcaption id="method-caption"></figcaption></figure>
+    </section>
+
+    <div id="paper-figures"></div>
+
+    <section id="quantitative" class="quantitative-section section-shell" aria-labelledby="quantitative-title" hidden>
+      <div class="section-heading"><h2 id="quantitative-title">Quantitative results</h2><p id="results-intro" class="section-description"></p></div>
+      <div class="results-controls"><div id="result-tabs" class="result-tabs" role="group" aria-label="Choose an evaluation protocol"></div><div id="result-datasets" class="result-datasets" role="group" aria-label="Choose a benchmark dataset"></div></div>
+      <div id="result-charts" class="metric-charts" aria-live="polite"></div>
+      <p id="results-chart-note" class="figure-note" hidden></p>
+      <details id="full-results" class="full-results"><summary>Full results <span>All metrics</span></summary><div class="table-scroll"><table id="results-table"><caption class="sr-only">Reported quantitative results</caption><thead></thead><tbody></tbody></table></div><p id="results-note" class="figure-note"></p></details>
+    </section>
+
+    <section id="citation" class="citation-section section-shell" aria-labelledby="citation-title" hidden>
+      <div class="citation-heading"><h2 id="citation-title">Citation</h2><button type="button" class="copy-button" id="copy-citation">Copy BibTeX <span aria-hidden="true">↗</span></button></div>
+      <pre><code id="bibtex"></code></pre>
+      <p class="sr-only" id="copy-status" role="status"></p>
+    </section>
+  </main>
+
+  <footer class="site-footer section-shell"><a href="#" class="footer-brand" id="footer-brand">GenSfM</a><p id="footer-note">Generative Structure from Motion with Native 3D Diffusion.</p><a href="#main">Back to top ↑</a></footer>
+  <noscript><p class="noscript-notice">This research page uses JavaScript to load the verified paper metadata and interactive examples. Please enable JavaScript, or read <a href="data/content.json">the paper metadata</a> and <a href="data/interactive-gallery.json">the selected object list</a> directly.</p></noscript>
+</body>
+</html>

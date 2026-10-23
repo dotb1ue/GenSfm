@@ -1,0 +1,346 @@
+{
+  "schemaVersion": 1,
+  "id": "oi-46-full",
+  "label": "Plush triceratops",
+  "mesh": "mesh.glb",
+  "meshSha256": "6bf46d55e7ccb73d84bccdaa9033fea071e2a03d44dd09fb4ad0a1817f35d404",
+  "images": [
+    {
+      "file": "input-00.png",
+      "width": 518,
+      "height": 518,
+      "channels": 3,
+      "viewIndex": 0,
+      "variant": "cropped",
+      "sourceKey": "actual-model-crop-white-composite",
+      "alphaMode": "none",
+      "background": "white",
+      "cropBounds": [
+        [
+          0.3212110354711573,
+          0.3210318882121104
+        ],
+        [
+          0.6787889645288427,
+          0.6786098172697957
+        ]
+      ],
+      "sha256": "aad5ca05e556c05c471493640e6777551abda9eedcf4bade871ca3d03276f544",
+      "pixelSha256": "c85df481231c44b6168ff483476fe1a8b1afa8d3c4691b122ea68aec2619ce2e",
+      "sourceRgbaSha256": "39085e3d41dc93f9d4f7b6892bac60064644b96a6330d5a6170f04752dd79eb6"
+    },
+    {
+      "file": "input-01.png",
+      "width": 518,
+      "height": 518,
+      "channels": 3,
+      "viewIndex": 1,
+      "variant": "cropped",
+      "sourceKey": "actual-model-crop-white-composite",
+      "alphaMode": "none",
+      "background": "white",
+      "cropBounds": [
+        [
+          0.22017198136868507,
+          0.22017198136868507
+        ],
+        [
+          0.7798280186313149,
+          0.7798280186313149
+        ]
+      ],
+      "sha256": "35830a47fd958bc91ba9846fa9a40a295ec890b5d70451ea1e9d324aa3975bef",
+      "pixelSha256": "855461d6663d24e76dd670194abb1d3c975ba0753277f7e25fbf3f3f5103f043",
+      "sourceRgbaSha256": "315df471ede0d96b74779867f3de879ff9d7c7da349b9305c349e8432735a271"
+    },
+    {
+      "file": "input-02.png",
+      "width": 518,
+      "height": 518,
+      "channels": 3,
+      "viewIndex": 2,
+      "variant": "cropped",
+      "sourceKey": "actual-model-crop-white-composite",
+      "alphaMode": "none",
+      "background": "white",
+      "cropBounds": [
+        [
+          0.2803654604084557,
+          0.28018631314940884
+        ],
+        [
+          0.7196345395915442,
+          0.7194553923324973
+        ]
+      ],
+      "sha256": "d610cc07c32f1fd31b034031632ac58eea70f9b6110efff64cd566ecd640b0f7",
+      "pixelSha256": "345c74f19bc8c610e4476a7af0a6c2b962ce77a6ead3b48f94040a59680820ba",
+      "sourceRgbaSha256": "b8291ca2f91ec6d1c96bf48e363032a08fc83ca611a1c8273530d1c144065f32"
+    },
+    {
+      "file": "input-03.png",
+      "width": 518,
+      "height": 518,
+      "channels": 3,
+      "viewIndex": 3,
+      "variant": "cropped",
+      "sourceKey": "actual-model-crop-white-composite",
+      "alphaMode": "none",
+      "background": "white",
+      "cropBounds": [
+        [
+          0.33285560730920816,
+          0.33285560730920816
+        ],
+        [
+          0.6675026872088857,
+          0.6675026872088857
+        ]
+      ],
+      "sha256": "6ef39681c4192874aa730d22ca96efe0981e8e962509457a9f52946b0b201b97",
+      "pixelSha256": "b286463fb720f836aeea23916dde852188e1177777787b01265ccdc5ea189c16",
+      "sourceRgbaSha256": "5d1cbcfb8ce5d455a78ea8deec589d4367a30b717f3bac460f631cbd8313b3a0"
+    }
+  ],
+  "cameras": [
+    {
+      "viewIndex": 0,
+      "image": "input-00.png",
+      "extrinsics": [
+        [
+          -0.004344005137681961,
+          0.9999792575836182,
+          -0.004754871595650911,
+          0.05521085858345032
+        ],
+        [
+          0.35614943504333496,
+          -0.002896013902500272,
+          -0.9344245195388794,
+          -0.06430172920227051
+        ],
+        [
+          -0.9344189167022705,
+          -0.005752589553594589,
+          -0.3561294674873352,
+          4.120940208435059
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "intrinsics": [
+        [
+          5.193636417388916,
+          0.0003282899269834161,
+          0.42993706464767456
+        ],
+        [
+          5.836454582671747e-16,
+          5.205300807952881,
+          0.5552294254302979
+        ],
+        [
+          4.522215020391185e-18,
+          -3.7474256290134894e-17,
+          1
+        ]
+      ],
+      "sourceKeys": [
+        "raw-predicted-extrinsics",
+        "raw-predicted-full-intrinsics"
+      ]
+    },
+    {
+      "viewIndex": 1,
+      "image": "input-01.png",
+      "extrinsics": [
+        [
+          0.9944202303886414,
+          -0.10549109429121017,
+          0.0002099233097396791,
+          0.0035962462425231934
+        ],
+        [
+          -0.014717655256390572,
+          -0.1407071053981781,
+          -0.9899418950080872,
+          -0.0034281015396118164
+        ],
+        [
+          0.10445958375930786,
+          0.9844151139259338,
+          -0.14147457480430603,
+          2.271857261657715
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "intrinsics": [
+        [
+          1.8764468431472778,
+          0.0007287996704690158,
+          0.505763053894043
+        ],
+        [
+          1.152659904678189e-16,
+          1.8762869834899902,
+          0.49249759316444397
+        ],
+        [
+          -4.1021004924692814e-17,
+          -5.717760252819696e-17,
+          1
+        ]
+      ],
+      "sourceKeys": [
+        "raw-predicted-extrinsics",
+        "raw-predicted-full-intrinsics"
+      ]
+    },
+    {
+      "viewIndex": 2,
+      "image": "input-02.png",
+      "extrinsics": [
+        [
+          0.648225724697113,
+          0.7614480257034302,
+          -0.0005593979149125516,
+          0.009073317050933838
+        ],
+        [
+          0.18741272389888763,
+          -0.16025765240192413,
+          -0.9691202044487,
+          -0.014524757862091064
+        ],
+        [
+          -0.7380242943763733,
+          0.6281037926673889,
+          -0.24658817052841187,
+          3.542022943496704
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "intrinsics": [
+        [
+          3.7944722175598145,
+          0.0007383414194919169,
+          0.4574931263923645
+        ],
+        [
+          2.4406314697956804e-16,
+          3.7954678535461426,
+          0.49298787117004395
+        ],
+        [
+          5.2771479411645446e-17,
+          9.81148438353402e-17,
+          1
+        ]
+      ],
+      "sourceKeys": [
+        "raw-predicted-extrinsics",
+        "raw-predicted-full-intrinsics"
+      ]
+    },
+    {
+      "viewIndex": 3,
+      "image": "input-03.png",
+      "extrinsics": [
+        [
+          -0.24389193952083588,
+          -0.9698019027709961,
+          0.0010170101886615157,
+          -0.25765907764434814
+        ],
+        [
+          -0.016264913603663445,
+          0.0030418692622333765,
+          -0.9998630881309509,
+          -0.05981376767158508
+        ],
+        [
+          0.9696660041809082,
+          -0.24387508630752563,
+          -0.01651563122868538,
+          8.469515800476074
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "intrinsics": [
+        [
+          11.391990661621094,
+          0.004355493932962418,
+          0.8622450232505798
+        ],
+        [
+          -8.791696949104837e-16,
+          11.42389965057373,
+          0.5724655985832214
+        ],
+        [
+          -7.008331580427992e-18,
+          -6.660377228576949e-18,
+          1
+        ]
+      ],
+      "sourceKeys": [
+        "raw-predicted-extrinsics",
+        "raw-predicted-full-intrinsics"
+      ]
+    }
+  ],
+  "coordinates": {
+    "mesh": "three-y-up",
+    "poses": "opencv-z-up",
+    "extrinsics": "world-to-camera",
+    "cameraAxes": "+x-right,+y-down,+z-forward",
+    "intrinsics": "normalized-cropped",
+    "imageOrigin": "top-left",
+    "dataToMesh": [
+      [
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        -1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        1
+      ]
+    ]
+  },
+  "gtAssistedAlignment": false
+}

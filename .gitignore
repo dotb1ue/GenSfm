@@ -1,0 +1,7 @@
+# Local preview and validation outputs
+.qa/
+*.log
+.DS_Store
+__pycache__/
+/notes/
+/tests/
