@@ -1,0 +1,4 @@
+[submodule "trellis/representations/mesh/flexicubes"]
+	path = trellis/representations/mesh/flexicubes
+	url = https://github.com/dotb1ue/FlexiCubes.git
+	branch = trellis

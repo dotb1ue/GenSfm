@@ -1,0 +1,89 @@
+# Visual Studio 2015/2017 cache/options directory
+.vs/
+
+# Visual Studio cache files
+# files ending in .cache can be ignored
+*.[Cc]ache
+# but keep track of directories ending in .cache
+!?*.[Cc]ache/
+
+# Python Tools for Visual Studio (PTVS)
+__pycache__/
+*.pyc
+
+# VS Code files for those working on multiple tools
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# Local History for Visual Studio Code
+.history/
+
+# Temp output
+*.out
+output*/
+temp*/
+sample*.mp4
+sample*.glb
+sample*.ply
+
+# Test scripts
+test_*.py
+configs/baseline/*
+
+# Local checkpoints
+checkpoint
+
+# Runner and results
+run_*.sh
+script_*.sh
+samples*
+assets/*
+!assets/ATTRIBUTION.md
+!assets/overview.webp
+!assets/badges/
+assets/badges/*
+!assets/badges/project.svg
+!assets/badges/models.svg
+!assets/badges/video.svg
+!assets/badges/paper.svg
+!assets/example/
+assets/example/*
+!assets/example/wagon/
+assets/example/wagon/*
+!assets/example/wagon/0[0-3].png
+!assets/example/head-sculpture/
+assets/example/head-sculpture/*
+!assets/example/head-sculpture/0[0-3].png
+!assets/example/garden-gnome/
+assets/example/garden-gnome/*
+!assets/example/garden-gnome/0[0-3].png
+!assets/example/spongebob/
+assets/example/spongebob/*
+!assets/example/spongebob/0[0-3].png
+!assets/example/floral-teapot/
+assets/example/floral-teapot/*
+!assets/example/floral-teapot/0[0-3].png
+figures
+MoGe
+*.slurm
+
+# Coding docs
+docs/
+.gstack/
+.codex
+CLAUDE.md
+AGENTS.md
+
+# Subprojects with their own git history
+debug_visualizer/
+paper/
+/paper_website/
+/paper_video/
+/pretrained/
+# Local validation scripts are not part of the source repository
+/tests/
+/Tests/

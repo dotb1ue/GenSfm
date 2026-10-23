@@ -1,0 +1,26 @@
+# Inference dependencies; install the CUDA build of PyTorch with setup.sh first.
+numpy==2.3.5
+pandas==3.0.0
+lpips==0.1.4
+safetensors==0.7.0
+huggingface-hub==1.3.4
+httpx[socks]==0.28.1
+pillow==12.1.0
+imageio==2.37.2
+imageio-ffmpeg==0.6.0
+tqdm==4.67.1
+easydict==1.13
+opencv-python-headless==4.13.0.90
+scipy==1.17.0
+ninja==1.13.0
+rembg==2.0.72
+onnxruntime==1.23.2
+trimesh==4.11.1
+plyfile==1.1.3
+open3d==0.19.0
+xatlas==0.0.11
+pyvista==0.46.5
+pymeshfix==0.17.2
+igraph==1.0.0
+setuptools==80.10.2
+wheel==0.46.3
