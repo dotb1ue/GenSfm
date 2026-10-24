@@ -6,7 +6,7 @@
 <p><sup>1</sup> The University of Hong Kong &nbsp; <sup>2</sup> Transengram &nbsp; <sup>3</sup> Tencent<br><sup>&#42;</sup> Equal contribution &nbsp; <sup>†</sup> Corresponding author</p>
 <p><span title="arXiv link coming soon"><img src="assets/badges/paper.svg" alt="Paper (arXiv coming soon)"></span> <a href="https://dotb1ue.github.io/GenSfm/"><img src="assets/badges/project.svg" alt="Project page"></a> <a href="https://huggingface.co/dotblue/GenSfm"><img src="assets/badges/models.svg" alt="Models"></a> <a href="https://dotb1ue.github.io/GenSfm/#video"><img src="assets/badges/video.svg" alt="Video"></a></p>
 <p><strong>A few images. One complete object. Its cameras.</strong></p>
-<a href="https://dotb1ue.github.io/GenSfm/#gallery"><img src="assets/overview.webp" width="960" alt="Four views of a fabric wagon and its reconstructed textured 3D model"></a>
+<a href="https://dotb1ue.github.io/GenSfm/#gallery"><img src="assets/overview.webp" width="960" alt="Four views of a fabric wagon, its textured 3D reconstruction inside a dashed unit cube, and recovered cameras with fading denoising trajectories"></a>
 </div>
 
 GenSfM jointly recovers **3D geometry, appearance, and camera poses** from a few uncalibrated images of one object. A native 3D diffusion model generates shared shape and per-view pose latents; a pose-aware second stage recovers detailed geometry and texture using the estimated cameras.
@@ -156,17 +156,6 @@ python example_multi_image.py \
 Use `--pretrained` or both local checkpoint arguments. Full training continuation requires the original training state.
 
 </details>
-
-## Troubleshooting
-
-| Symptom | Action |
-| --- | --- |
-| CUDA or extension import failure | Activate `gensfm` and check that the driver, CUDA toolkit, PyTorch, and compiled extensions are compatible. |
-| Foreground alpha is required | Supply masked RGBA images, or add `--remove-background` for opaque inputs. |
-| Empty foreground / crop would truncate the object | Inspect the mask and add transparent margins around the complete object. |
-| Too many input views | Keep two to four images in the input directory. |
-| Output directory already exists | Choose a new directory; previous results are preserved. |
-| Model download fails | Check access to Hugging Face and Torch Hub, or load a complete local bundle with the image encoder already cached. |
 
 ## Citation
 
