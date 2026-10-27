@@ -75,8 +75,8 @@
   ],
   "resources": [
     {
-      "label": "arXiv · Coming soon",
-      "pending": true
+      "label": "arXiv",
+      "url": "https://arxiv.org/abs/2610.35522"
     },
     {
       "label": "Code",
@@ -621,5 +621,5 @@
     ]
   },
   "footerNote": "GenSfM · Generative Structure from Motion with Native 3D Diffusion",
-  "citation": "@inproceedings{duan2026gensfm,\n  title = {Generative Structure from Motion with Native {3D} Diffusion},\n  author = {Duan, Haobin and Huang, Binbin and Xiang, Mochu and Zhao, Yiqun\n            and Zhao, Zibo and Ma, Yi and Gao, Shenghua},\n  booktitle = {Advances in Neural Information Processing Systems},\n  year = {2026}\n}"
+  "citation": "@inproceedings{duan2026gensfm,\n  title = {Generative Structure from Motion with Native {3D} Diffusion},\n  author = {Duan, Haobin and Huang, Binbin and Xiang, Mochu and Zhao, Yiqun\n            and Zhao, Zibo and Ma, Yi and Gao, Shenghua},\n  booktitle = {Advances in Neural Information Processing Systems},\n  year = {2026},\n  eprint = {2610.35522},\n  archivePrefix = {arXiv},\n  primaryClass = {cs.CV},\n  url = {https://arxiv.org/abs/2610.35522}\n}"
 }

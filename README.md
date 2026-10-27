@@ -24,7 +24,7 @@ Open `http://localhost:5180/`. JSON and ES modules require HTTP; opening `index.
 - `viewer.mjs`, `projection.mjs`: interactive camera views and reprojection.
 - `results.mjs`, `results.css`: benchmark charts and full tables.
 
-The Code and Models buttons use the project repositories. The arXiv entry is a non-clickable placeholder until the paper identifier is available. To activate it, replace its `pending` field with the confirmed `url` in `data/content.json`. Add the same confirmed paper URL to the BibTeX entry when appropriate.
+The arXiv button links to the [paper](https://arxiv.org/abs/2610.35522), and the Code and Models buttons use the project repositories. The BibTeX entry includes the same paper URL and arXiv identifier.
 
 ## Interactive gallery
 
